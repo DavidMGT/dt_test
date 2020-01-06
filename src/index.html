@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>CASINO</title>
+  <script src="js/jquery-3.2.0.min.js"></script>
+  <script src="js/engine.io.js"></script>
+  <script src="js/websocket.js"></script>
+  <script src="js/async.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="js/casino.js"></script>
+  <style>
+    @page {
+      size: A4 landscape;
+      margin: 0;
+    }
+
+    @media print {
+      body {
+        -webkit-transform: scale(0.5);
+        -moz-transform: scale(0.5);
+        -o-transform: scale(0.5);
+        transform: scale(0.5);
+      }
+
+      #game_info { display: none; }
+      #bpt_info { display: none; }
+      #pair_info { display: none; }
+      #ask_info { display: none; }
+      #shoe_info { display: none; }
+      #bead { display: none; }
+      #ask_canvas { display: none; }
+    }
+  </style>
+</head>
+<body>
+<div id="casino">
+  <div id="big_bg">
+    <canvas id="big"></canvas>
+  </div>
+  <div id="eye_bg">
+    <canvas id="eye"></canvas>
+  </div>
+  <div id="small_bg">
+    <canvas id="small"></canvas>
+  </div>
+  <div id="bug_bg">
+    <canvas id="bug"></canvas>
+  </div>
+  <div id="bead_bg">
+    <canvas id="bead"></canvas>
+  </div>
+  <div id="game_bg">
+    <table id="game_table">
+      <tr id="game_line">
+        <td id="game_title">GAME&nbsp;#</td>
+        <td></td>
+        <td id="game_cnt"></td>
+      </tr>
+      <tr>
+        <td id="game_title_bkr">Banker</td>
+        <td>
+          <canvas id="game_icon_bkr"></canvas>
+        </td>
+        <td id="game_bkr"></td>
+      </tr>
+      <tr>
+        <td id="game_title_plr">Player</td>
+        <td>
+          <canvas id="game_icon_plr"></canvas>
+        </td>
+        <td id="game_plr"></td>
+      </tr>
+      <tr>
+        <td id="game_title_tie">Tie</td>
+        <td>
+          <canvas id="game_icon_tie"></canvas>
+        </td>
+        <td id="game_tie"></td>
+      </tr>
+      <tr>
+        <td id="game_title_bpair">Banker&nbsp;(Pair)</td>
+        <td>
+          <canvas id="game_icon_bpair"></canvas>
+        </td>
+        <td id="game_bpair"></td>
+      </tr>
+      <tr>
+        <td id="game_title_ppair">Player&nbsp;(Pair)</td>
+        <td>
+          <canvas id="game_icon_ppair"></canvas>
+        </td>
+        <td id="game_ppair"></td>
+      </tr>
+    </table>
+  </div>
+
+</div>
+<div id="setting_info"></div>
+<div id="mask">请点击任意位置继续操作</div>
+</body>
+</html>
